@@ -2,6 +2,7 @@
 // THEREFORE THIS TESTBENCH IS FOR NARROW TRANSFERS ONLY
 
 //TO CHANGE THIS TO NORMAL CHANGE THE DATA SIZE BY 32 BIT BELOW BY UNCOMMENTING
+//ALSO HAVE TO CHANGE THE STROBE CONSTRAINT
 
 class axi_tx extends uvm_sequence_item;
   
@@ -65,4 +66,5 @@ class axi_tx extends uvm_sequence_item;
     soft burst_size == 2;    // 4 bytes/beat
     soft addr%4 == 0;        //alligned transfer
   }
+
 endclass
