@@ -71,7 +71,7 @@ class axi_cov extends uvm_subscriber#(axi_tx);
   //TLM method > must be implemented in the cov class
   function void write(axi_tx t);
     this.tx=t;   
-    `uvm_info("COVERAGE", $sformatf("Sampled %s tx: id=%0h", tx.wr_rd ? "write" : "read", tx.tx_id), UVM_MEDIUM)
+    //`uvm_info("COVERAGE", $sformatf("Sampled %s tx: id=%0h", tx.wr_rd ? "write" : "read", tx.tx_id), UVM_MEDIUM)
     if(tx.wr_rd==1)
       cg_wr.sample();
     else
